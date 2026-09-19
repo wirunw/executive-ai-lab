@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ปดพ.1 Executive AI Lab | ดร.ภก.วิรุณ เวชศิริ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b2d5f;--teal:#078b9e;--gold:#f4c95d;--green:#168a68;--red:#c8102e;--ink:#253044;--muted:#667085;--off:#f6f9fc;--line:#dfe8f2;--soft:#eef8ff;--softg:#effaf6;--softy:#fff9e9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Sarabun",sans-serif;color:var(--ink);background:var(--off);line-height:1.65}
+.hero{background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;padding:30px 20px 38px}.wrap{max-width:1180px;margin:auto}.badge{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;border-radius:999px;padding:6px 11px;font-size:12px}.hero h1{font-size:clamp(34px,5vw,60px);line-height:1.08;margin:12px 0}.hero h1 span{color:#ffe18a}.hero p{max-width:900px;font-size:18px;margin:0}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.chip{border:1px solid #ffffff55;border-radius:999px;padding:6px 10px;font-size:12px;background:#ffffff12}
+.tabs{position:sticky;top:0;z-index:10;background:#fff;border-bottom:3px solid var(--gold);box-shadow:0 3px 14px #00000012}.tabs .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:10px 14px}.tab{border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--navy);font:800 14px Sarabun;padding:10px;cursor:pointer}.tab.active{background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;border-color:transparent}
+main{max-width:1180px;margin:auto;padding:25px 16px 60px}.page{display:none}.page.active{display:block}.intro,.master,.case{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 24px #0b2d5f12}.intro{padding:20px;margin-bottom:20px}.intro h2,.master h2{color:var(--navy);margin:4px 0 8px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}.flow div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;font-size:12px}.flow b{display:block;color:var(--navy);font-size:14px}
+.master{padding:20px;margin-bottom:24px;background:linear-gradient(135deg,#f7fbff,#fffaf0)}.master-head,.panel-head,.case-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.master textarea{min-height:470px}.note{font-size:13px;color:var(--muted)}.rule{background:var(--softg);border-left:6px solid var(--green);border-radius:12px;padding:12px;margin-top:12px}
+.case{overflow:hidden;margin:22px 0}.case-head{padding:17px 18px;background:linear-gradient(90deg,#fff,#f5fbff);border-bottom:1px solid var(--line)}.num{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;font-weight:800;flex:none}.titlebox{flex:1}.kicker{font-size:11px;color:var(--teal);font-weight:800;text-transform:uppercase}.titlebox h3{color:var(--navy);font-size:21px;line-height:1.35;margin:3px 0}.meta{display:flex;flex-wrap:wrap;gap:6px}.pill{background:#eef4ff;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:700;color:var(--navy)}
+.grid{display:grid;grid-template-columns:1fr 1fr}.panel{padding:17px}.panel.context{background:#fffaf0;border-right:1px solid var(--line)}.panel.prompt{background:#f7f9ff}.panel-head{font-weight:800;color:var(--navy);margin-bottom:8px}.editor{width:100%;min-height:330px;border:1px solid #ccd8e5;border-radius:11px;padding:13px;font:16px/1.6 Sarabun;background:#fff;color:var(--ink);resize:vertical}.editor:focus{outline:0;border-color:var(--teal);box-shadow:0 0 0 3px #078b9e18}
+.tools{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}.btn{border:0;border-radius:9px;padding:8px 11px;color:#fff;font:700 13px Sarabun;cursor:pointer}.copy{background:var(--navy)}.full{background:var(--green)}.reset{background:#667085}.objective{padding:12px 18px;background:#fbfcfe;border-top:1px solid #edf1f5;font-size:13px}.objective b{color:var(--navy)}.challenge{padding:13px 18px;background:var(--softy);border-top:1px dashed #e5c878}.challenge b{color:#805500}
+.quick{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:24px}.quick h3{color:var(--navy);margin-top:0}.quick code{display:block;white-space:pre-wrap;background:#f7f9ff;border:1px solid var(--line);border-radius:10px;padding:11px;margin:8px 0;font-family:Sarabun}
+footer{background:var(--navy);color:#fff;border-top:5px solid var(--gold)}footer .wrap{padding:18px 16px}.small{font-size:12px;color:#dbe7f4}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.panel.context{border-right:0;border-bottom:1px solid var(--line)}.flow{grid-template-columns:1fr 1fr}.tabs .wrap{display:flex;overflow:auto}.tab{min-width:210px}.editor{min-height:300px}.master textarea{min-height:520px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<span class="badge">ปดพ.1 สัญจร · 19 กันยายน 2569 · สัตหีบ</span>
+<h1>AI for <span>Digital Medical Executives</span></h1>
+<p>Executive AI Lab: จาก Information → Insight → Decision → Action → Transformation โดยใช้ Master Context ร่วมกับ Case Context และคง Human-in-the-Loop ในจุดตัดสินใจสำคัญ</p>
+<div class="chips"><span class="chip">Executive Brief</span><span class="chip">KPI → Insight</span><span class="chip">Decision Support</span><span class="chip">Scenario Planning</span><span class="chip">Workflow Redesign</span><span class="chip">AI Governance</span></div>
+</div></header>
+
+<nav class="tabs"><div class="wrap">
+<button class="tab active" data-page="execute">① EXECUTE · งานบริหาร</button>
+<button class="tab" data-page="decide">② DECIDE · การตัดสินใจ</button>
+<button class="tab" data-page="transform">③ TRANSFORM · ออกแบบองค์กร</button>
+</div></nav>
+
+<main>
+<section class="page active" id="execute">
+<div class="intro"><h2>Executive AI Operating Model</h2><p>ใช้ AI ไม่ใช่เพียงเพื่อสร้างข้อความ แต่เพื่อจัดระเบียบข้อมูล มองเห็นรูปแบบ เตรียมการตัดสินใจ ลงมือทำ และออกแบบกระบวนงานใหม่</p>
+<div class="flow"><div><b>1 INFORMATION</b>รวบรวมสิ่งที่เกิดขึ้น</div><div><b>2 INSIGHT</b>หา pattern / gap</div><div><b>3 DECISION</b>เตรียม options</div><div><b>4 ACTION</b>owner / deadline</div><div><b>5 TRANSFORM</b>ออกแบบ workflow ใหม่</div></div>
+<div class="rule"><b>Key message:</b> AI prepares the decision. Executive owns the decision.</div></div>
+
+<div class="master">
+<div class="master-head"><div><span class="badge">MASTER CONTEXT · ORGANIZATION</span><h2>🏥 Executive Context Hub</h2><p class="note">ใช้บริบทองค์กรก้อนเดียวร่วมกับ Case 01–06 แล้วเติมข้อมูลเฉพาะโจทย์ใน CASE CONTEXT</p></div><button class="btn copy" data-copy="master">คัดลอก Master Context</button></div>
+<textarea class="editor" id="master">--- MASTER CONTEXT: ORGANIZATION ---
+
+องค์กรสมมุติ: ศูนย์การแพทย์เมโทรเฮลท์
+
+ช่วงเวลาอ้างอิง
+- ข้อมูลพื้นฐานขององค์กร ณ กันยายน 2569
+- Context Priority Rule: หาก CASE CONTEXT มีข้อมูลใหม่กว่า หรือเฉพาะเจาะจงกว่าสำหรับ Case นั้น ให้ใช้ CASE CONTEXT สำหรับเหตุการณ์นั้น
+- Safety / Governance Guardrails ใน MASTER CONTEXT ยังคงมีผลเสมอ
+- ห้ามแก้ไขหรือประมาณตัวเลขขึ้นเอง
+
+STRATEGIC GOALS — เป้าหมายปี 2570
+- ลดเวลารอผู้ป่วยนอกอย่างน้อย 20% และมุ่งสู่ระดับไม่เกิน 60 นาที
+- เพิ่มการเข้าถึงและการใช้บริการดิจิทัลอย่างเหมาะสม
+- รักษาคุณภาพและความปลอดภัยของบริการ
+- รักษาหรือยกระดับความพึงพอใจของผู้รับบริการ
+- เพิ่มความสามารถของผู้บริหารในการใช้ข้อมูลเพื่อการตัดสินใจ
+
+CURRENT ORGANIZATIONAL BASELINE
+- OPD ประมาณ 15,000 visits/เดือน และมีแนวโน้มเพิ่มขึ้นจากปีก่อน
+- เวลารอ OPD ปัจจุบันประมาณ 78 นาที
+- Bed occupancy อยู่ในระดับประมาณ 90% ขึ้นไป
+- OT บุคลากรมีแนวโน้มเพิ่มขึ้นต่อเนื่องหลายเดือน
+- มี Digital Appointment และ Virtual Follow-up แต่ adoption และ workflow ยังไม่สม่ำเสมอระหว่างหน่วยงาน
+- KPI กระจายอยู่ในหลาย Excel / Google Sheet และการสรุปผู้บริหารยังมี manual process จำนวนมาก
+- นิยาม KPI, data ownership และสิทธิการเข้าถึงข้อมูลบางส่วนยังต้องทำให้ชัดเจน
+
+DIGITAL & GOVERNANCE CONTEXT
+- มี Digital Hospital Steering Committee กำกับ Digital Transformation
+- มี DPO, IT Security, Clinical Governance และคณะกรรมการที่เกี่ยวข้อง
+- ปัจจุบันยังไม่มี Enterprise AI Platform ที่ได้รับอนุมัติให้ประมวลผล PHI/PII จริงในทุก use case
+- AI output ที่มีผลต่อ clinical workflow, patient communication หรือการตัดสินใจสำคัญ ต้องมี Human Review และ approval ตาม governance ที่เกี่ยวข้อง
+
+90-DAY EXECUTIVE CONSTRAINTS
+- ผู้บริหารต้องการเห็น Quick Win ภายใน 90 วัน
+- Quick Win / Pilot 90 วันแรกต้องไม่อาศัยการเพิ่ม FTE
+- งบรวมสำหรับ Quick Win / Pilot ไม่เกิน 3 ล้านบาท
+- หาก CASE CONTEXT ระบุวงเงินจริงที่ต่ำกว่า ให้ใช้ตัวเลขนั้นสำหรับ Case นั้น
+- งบ Full-scale Project เป็นคนละกรอบกับ Pilot 90 วัน
+
+DATA & SAFETY RULES
+- ห้ามป้อน PII/PHI จริงเข้าสู่ public/general AI ใน workshop หรือ sandbox
+- Use case ที่เกี่ยวข้องกับข้อมูลรายบุคคลสามารถวิเคราะห์ Governance ได้ แต่การทดลองควรใช้ synthetic หรือ de-identified data จนกว่าจะได้รับอนุมัติ
+- ห้ามสร้างตัวเลข ข้อเท็จจริง Owner Deadline หรือ Policy ที่ไม่มีในข้อมูล
+- หากข้อมูลไม่พอ ให้ระบุ Data Gap, Policy Gap หรือ Governance Gap
+- แยก Fact / Interpretation / Assumption / Recommendation ให้ชัดเจน</textarea>
+</div>
+
+<div id="case01"></div>
+</section>
+
+<section class="page" id="decide">
+<div class="intro"><h2>Decision Intelligence</h2><p>เปลี่ยนข้อมูลให้เป็นคำถามผู้บริหาร ทางเลือก trade-offs และ scenario โดยไม่ให้ AI ตัดสินใจแทน</p><div class="rule"><b>Shared Context:</b> ทุก Lab ใช้ MASTER CONTEXT เดียวกัน และ CASE CONTEXT เป็นข้อมูลเฉพาะโจทย์</div></div>
+<div id="case02"></div><div id="case03"></div><div id="case04"></div>
+</section>
+
+<section class="page" id="transform">
+<div class="intro"><h2>Organization Transformation</h2><p>เปลี่ยนจาก “ใช้ AI เก่งขึ้น” ไปเป็น “ออกแบบ Workflow และ Governance ใหม่”</p><div class="rule"><b>Transformation lens:</b> People + Process + Data + Policy + Tools + Human Checkpoints</div></div>
+<div id="case05"></div><div id="case06"></div>
+<div class="quick"><h3>🚀 90-Day Transformation Prompt Pack</h3>
+<code>จัด AI use cases เป็น Quick Win / Foundational / High-Risk Experiment พร้อม Dependency, Owner, KPI และ Stop Criteria</code>
+<code>สร้าง AI Readiness Checklist: Strategy | Workflow | Data | Technology | Security | Governance | People | Measurement</code>
+<code>สร้าง Stop / Continue / Scale Review สำหรับวันที่ 30, 60, 90 โดยใช้หลักฐานที่ต้องเก็บก่อนการขยายผล</code>
+</div></section>
+</main>
+
+<footer><div class="wrap"><b>ปดพ.1 Executive AI Lab</b><div class="small">ดร.ภก.วิรุณ เวชศิริ · 19 กันยายน 2569 · Information → Insight → Decision → Action → Transformation</div></div></footer>
+
+<script>
+const cases=[
+{id:"01",target:"case01",kicker:"MANAGEMENT · MEETING",title:"📝 Meeting → Executive Brief → Action Tracker",meta:["RTF + Context","Quick Win","Internal / No PII"],
+context:`--- CASE CONTEXT: MEETING #01 ---
+
+ประชุมคณะกรรมการ Digital Hospital Steering Committee วันที่ 15 ก.ย. 2569
+
+ประเด็นสำคัญ
+- ทีม OPD รายงานเวลารอเฉลี่ย 78 นาที สูงกว่าเป้าหมาย 60 นาที
+- Digital Appointment ใช้งานแล้ว 3 แผนก แต่บางแผนกยังรับ walk-in แบบเดิมทั้งหมด
+- ทีม IT เสนอ pilot dashboard รวม KPI จาก 4 แหล่งข้อมูลภายใน 6 สัปดาห์
+- ฝ่ายการเงินแจ้งว่างบนำร่องปีนี้เหลือ 2.8 ล้านบาท
+- มีข้อกังวลเรื่อง data ownership และสิทธิการเข้าถึงข้อมูล
+- ผู้อำนวยการเห็นชอบให้ทดลอง dashboard แต่ให้เริ่มจากข้อมูล aggregate เท่านั้น
+- มอบฝ่ายยุทธศาสตร์และ IT ทำ data map และเสนอ owner ของ KPI ภายใน 30 ก.ย.
+- ยังไม่ได้ข้อสรุปว่าจะเลือกหน่วยงานใดเป็น pilot สำหรับ workflow redesign
+- นัดครั้งถัดไป 7 ต.ค. 2569`,
+prompt:`Role: คุณเป็น Executive Chief of Staff ขององค์กรสุขภาพ มีหน้าที่ช่วยเตรียมข้อมูลเพื่อการตัดสินใจของผู้บริหาร โดยไม่ตัดสินใจแทนผู้บริหาร
+
+Task: อ่าน MASTER CONTEXT และ CASE CONTEXT แล้วเปลี่ยนเป็น Executive Brief ที่ผู้บริหารอ่านจบภายใน 2 นาที พร้อม Action Tracker สำหรับติดตามการประชุมครั้งถัดไป
+
+Format:
+1) Executive Summary — ไม่เกิน 5 bullet
+2) Decisions Made — เฉพาะสิ่งที่มีหลักฐานว่า “ตัดสินใจ/เห็นชอบแล้ว”
+3) Action Tracker: Action | Owner | Deadline | Status | Dependency
+4) Open Issues / Decisions Still Needed
+5) Risks / Blockers
+6) Data Gaps
+7) Questions to Ask at Next Meeting — ไม่เกิน 5 ข้อ
+
+Guardrails:
+- ใช้ MASTER เป็นบริบทองค์กรและ CASE เป็นข้อเท็จจริงเฉพาะประชุม
+- CASE ที่ใหม่กว่า/เฉพาะเจาะจงกว่าใช้เหนือ MASTER แต่ไม่ลบ Safety/Governance Guardrails
+- ห้ามสร้าง Owner, Deadline, Status, ตัวเลข หรือมติที่ไม่มีในข้อมูล
+- Proposal ไม่ถือเป็น Decision จนกว่าจะมีหลักฐานว่าเห็นชอบ
+- Goal/Target ไม่ถือเป็นผลการดำเนินงานจริง
+- แยก Fact / Interpretation / Recommendation
+- หากข้อมูลไม่พอให้ระบุ Data Gap
+- ไม่ใช้ข้อมูลภายนอก`,
+objective:"เห็น Decision / Action / Owner / Deadline / Open Issue โดยไม่ต้องอ่าน transcript ทั้งหมด",
+challenge:"ให้ AI ทำ Follow-up Tracker สำหรับการประชุมครั้งหน้า โดยเปรียบเทียบ Action ที่เสร็จแล้ว/ยังค้าง"},
+{id:"02",target:"case02",kicker:"DATA → INSIGHT → ACTION",title:"📊 KPI / CSV → Executive Dashboard + Management Insight",meta:["CSV + RTF","Executive Analytics","Aggregate Data"],
+context:`--- CASE CONTEXT: KPI DATASET #02 ---
+
+Month,OPD_Visits,Avg_Wait_Min,Bed_Occupancy_Pct,Staff_OT_Hours,Complaints,Digital_Visit_Pct
+Apr,13800,69,87,920,68,11
+May,14100,71,88,960,72,13
+Jun,14500,73,89,1010,75,15
+Jul,14900,76,90,1080,83,17
+Aug,15200,79,92,1160,91,18
+Sep,15450,78,91,1210,88,21
+
+KPI targets สำหรับ Dashboard Case
+- Avg_Wait_Min <= 60
+- Bed_Occupancy_Pct <= 85
+- ลด OT โดยไม่ลดคุณภาพบริการ
+- เพิ่ม Digital_Visit_Pct อย่างมีประสิทธิผล
+
+หมายเหตุ
+- ข้อมูลชุดนี้เป็น aggregate monthly KPI
+- ใช้ CASE CONTEXT เป็นข้อมูล KPI เฉพาะที่วิคราะห์ และ MASTER เป็นบริบทองค์กร`,
+prompt:`Role: คุณเป็น Healthcare Executive Analytics Advisor
+
+Task: ใช้ MASTER CONTEXT ร่วมกับ CASE CONTEXT ซึ่งเป็น KPI เพื่อเตรียม Executive Dashboard และ Management Insight ไม่สรุปแค่ “อะไรเกิดขึ้น” แต่ช่วยผู้บริหารตั้งคำถาม “ทำไมจึงน่าจะเกิด / เรายังไม่รู้อะไร / ควรถามอะไรต่อ”
+
+Format:
+A. Executive Snapshot — 5 bullet
+B. KPI Status: KPI | Latest | Target | Direction | Status
+C. Trends / Anomalies ที่เห็นจากข้อมูล
+D. “What this may mean” — Interpretation ไม่ใช่ Fact
+E. Data Gaps — ข้อมูลอะไรยังขาดก่อนสรุปสาเหตุ
+F. 5 Management Questions
+G. 3 Candidate Actions พร้อม KPI ที่ควรติดตาม
+H. ถ้าเครื่องมือรองรับ ให้เสนอ specification สำหรับ interactive HTML dashboard: KPI cards + trend charts + filter + management notes
+
+Guardrails:
+- ใช้ MASTER เป็นเป้าหมาย/ข้อจำกัดองค์กร และ CASE เป็นชุดข้อมูลที่วิเคราะห์
+- ห้ามอ้าง causal relationship จาก correlation เพียงอย่างเดียว
+- คำนวณจากข้อมูลที่มีเท่านั้น ห้ามสร้างข้อมูลเพิ่ม
+- แยก Fact / Interpretation / Hypothesis
+- ไม่สร้างข้อมูลรายบุคคล`,
+objective:"Dashboard ที่ไม่ได้แค่แสดงตัวเลข แต่ช่วยผู้บริหารเห็น Pattern, Data Gap และคำถามที่ควรถาม",
+challenge:"ลองสั่งต่อว่า ‘ถ้าต้องเลือก KPI เพียง 4 ตัวสำหรับ CEO dashboard จะเลือกอะไร และเพราะอะไร โดยอ้าง Context’"},
+{id:"03",target:"case03",kicker:"DECISION PREPARATION",title:"🧭 Problem → Executive Decision Brief",meta:["Options + Trade-offs","Management","Mixed Context"],
+context:`--- CASE CONTEXT: DECISION PROBLEM #03 ---
+
+ผู้บริหารต้องตัดสินใจเลือกระบบ Digital Appointment pilot ภายใน 2 สัปดาห์
+
+ข้อมูลที่มี
+- แผนก A: ผู้ป่วย 2,800 visit/เดือน เวลารอ 82 นาที ทีมพร้อมทดลองระบบใหม่
+- แผนก B: ผู้ป่วย 4,100 visit/เดือน เวลารอ 76 นาที มีข้อจำกัดบุคลากรหน้างาน
+- แผนก C: ผู้ป่วย 1,900 visit/เดือน เวลารอ 92 นาที workflow ซับซ้อนและมีหลายจุดส่งต่อ
+- งบเฉพาะ pilot นี้ 1.2 ล้านบาท ซึ่งอยู่ภายในเพดาน Pilot 90 วันของ MASTER CONTEXT
+- ทีม IT รองรับ pilot พร้อมกันได้ไม่เกิน 2 แผนก
+- เป้าหมาย: เรียนรู้ผลต่อเวลารอ, no-show, workload และ user adoption ภายใน 90 วัน
+- ยังไม่มี baseline no-show และ user adoption แยกแผนก
+- การเปลี่ยน clinical workflow ต้องผ่านทีมวิชาชีพและ governance ที่เกี่ยวข้อง`,
+prompt:`Role: คุณเป็น Executive Decision Support Analyst
+
+Task: ใช้ MASTER CONTEXT ร่วมกับ CASE CONTEXT เพื่อจัดทำ Decision Brief ช่วยผู้บริหารพิจารณา pilot โดย “ไม่เลือกแทนผู้บริหาร”
+
+Format:
+1) Decision to Be Made — 1 ประโยค
+2) Confirmed Facts
+3) Unknowns / Data Gaps
+4) Assumptions — หากจำเป็นต้องใช้ ให้ประกาศว่าเป็นสมมติฐาน
+5) Options อย่างน้อย 3 ทางเลือก
+6) ตาราง: Option | Potential Benefit | Risk | Resource | Learning Value | Dependency
+7) Reversible vs Hard-to-Reverse Elements
+8) Questions Requiring Executive Judgment
+9) Minimum Evidence to Collect During 90-Day Pilot
+
+Guardrails:
+- MASTER เป็นกรอบ Quick Win, งบรวม และ governance; CASE เป็นข้อมูลเฉพาะการเลือก pilot
+- ห้ามทำ Context Difference เป็นข้อขัดแย้งหาก CASE ระบุตัวเลขเฉพาะกว่า
+- ห้ามประกาศ “ทางเลือกที่ดีที่สุด”
+- ห้ามสร้างตัวเลขที่ไม่มี
+- ข้อเสนอที่กระทบ clinical workflow ต้องแสดง governance checkpoint
+- แยก Facts / Assumptions / Recommendations ชัดเจน`,
+objective:"AI เตรียมองค์ประกอบของการตัดสินใจ แต่ผู้บริหารยังถือสิทธิ์ตัดสินใจทั้งหมด",
+challenge:"สั่งต่อให้ทำ Pre-mortem: สมมติ pilot ล้มเหลวใน 90 วัน สาเหตุที่เป็นไปได้และ Early Warning Signal คืออะไร"},
+{id:"04",target:"case04",kicker:"SCENARIO PLANNING",title:"🔮 Scenario Planning → What if?",meta:["What-if","Strategic","Assumption-aware"],
+context:`--- CASE CONTEXT: SCENARIO PLAN #04 ---
+
+องค์กรกำลังพิจารณาขยาย Virtual Follow-up Clinic ภายใน 6 เดือน
+
+Baseline ของโครงการ
+- ผู้ป่วย follow-up ที่อาจเหมาะกับช่องทางดิจิทัลประมาณ 2,400 visit/เดือน
+- กรอบงบ Full-scale Program 12 ล้านบาท เป็นคนละกรอบกับ Pilot 90 วันใน MASTER CONTEXT
+- Pilot 90 วันแรกต้องอยู่ภายใต้ข้อจำกัด FTE และงบใน MASTER CONTEXT
+- ต้องผ่าน privacy/security review และ governance ที่เกี่ยวข้องก่อน go-live
+- เป้าหมายคือเพิ่ม access และลด unnecessary in-person visit โดยไม่ลดคุณภาพบริการ
+
+เหตุการณ์ stress-test
+1) Demand เพิ่ม 30% หลังเปิดบริการ
+2) งบ Full-scale ลด 20%
+3) บุคลากรไม่เพิ่ม 6 เดือน
+4) ระบบหลักเชื่อมข้อมูลไม่ได้ใน phase แรก ต้องใช้ manual handoff ชั่วคราว`,
+prompt:`Role: คุณเป็น Strategic Scenario Planning Facilitator สำหรับองค์กรสุขภาพ
+
+Task: ใช้ MASTER CONTEXT ร่วมกับ CASE CONTEXT เพื่อสร้าง 3 Scenario สำหรับ stress-test แผน Virtual Clinic โดยห้ามทำนายอนาคตแบบฟันธง
+
+Format:
+Scenario A — Conservative
+Scenario B — Balanced
+Scenario C — Aggressive
+
+แต่ละ Scenario ระบุ:
+- Operating Assumptions
+- What We Would Prioritize
+- Resource Pressure
+- Key Risks
+- Leading Indicators to Watch
+- Trigger ที่ควรให้ “เปลี่ยนแผน”
+- Contingency Action
+
+จากนั้นสร้าง Scenario Comparison Table และระบุ “No-Regret Moves” ที่เหมาะในหลาย Scenario
+
+Guardrails:
+- MASTER เป็นข้อจำกัดองค์กร โดยเฉพาะ Quick Win 90 วัน, Governance และ Human Review
+- CASE เป็นแผนและเหตุการณ์ stress-test เฉพาะโครงการ
+- แยกกรอบงบ Full-scale ออกจาก Pilot 90 วันอย่างชัดเจน
+- สมมติฐานทุกข้อให้ติดป้าย ASSUMPTION
+- ห้ามสร้าง probability ถ้าไม่มีข้อมูล
+- ประเด็น clinical/privacy/security ต้องมี Human approval ก่อนดำเนินการจริง`,
+objective:"Scenario Planning ไม่ใช่การทำนายอนาคต แต่เตรียมการตัดสินใจเมื่อเงื่อนไขเปลี่ยน",
+challenge:"เปลี่ยนเงื่อนไขเป็น ‘งบลด 40%’ แล้วดูว่า Priority และ Trigger เปลี่ยนอย่างไร"},
+{id:"05",target:"case05",kicker:"WORKFLOW ENGINEERING",title:"🔁 Current Workflow → AI Opportunity Map → Future Workflow",meta:["People + Process + Data","Transformation","Workflow"],
+context:`--- CASE CONTEXT: WORKFLOW #05 ---
+
+Workflow ปัจจุบัน: การจัดทำ Monthly Executive Performance Report
+
+1) หน่วยงาน 8 แห่งส่ง Excel คนละ template ภายในวันที่ 3 ของเดือน
+2) ฝ่ายยุทธศาสตร์รวมไฟล์และแก้ชื่อคอลัมน์ด้วยมือ 1–2 วัน
+3) เจ้าหน้าที่ตรวจคุณภาพครบถ้วนและส่งกลับให้หน่วยงานแก้หากข้อมูลไม่ครบ
+4) นักวิเคราะห์คำนวณ KPI และทำกราฟใน Excel
+5) ทีมงานเขียน Executive Summary จากกราฟและข้อมูลย้อนหลัง
+6) ส่งร่างให้หัวหน้าฝ่ายตรวจ ถามกลับเรื่องตัวเลข/นิยาม KPI หลายรอบ
+7) ทำ PowerPoint 15–20 หน้า
+8) ผู้บริหารได้รับรายงานประมาณวันที่ 10–12 ของเดือน
+
+Pain points
+- ใช้เวลารวมประมาณ 6–8 person-days/เดือน
+- นิยาม KPI บางตัวยังไม่ตรงกัน
+- แก้ version ซ้ำหลายรอบ
+- ผู้บริหารเห็นข้อมูลช้า
+- ยังไม่มี audit trail ชัดเจนว่าตัวเลขแต่ละค่ามาจากไฟล์ไหน
+
+ข้อกำหนดเฉพาะ Workflow นี้
+- Pilot ใช้ aggregate KPI ตาม MASTER DATA & SAFETY RULES
+- ระบบใหม่ต้อง trace source และผู้รับผิดชอบได้
+- ผู้บริหารยังต้อง approve รายงาน final ทุกครั้ง`,
+prompt:`Role: คุณเป็น Healthcare Workflow Redesign Consultant
+
+Task: ใช้ MASTER CONTEXT ร่วมกับ CASE CONTEXT เพื่อวิเคราะห์ Current Workflow แล้วออกแบบ AI Opportunity Map และ Future-State Workflow โดยมี traceability และจุดควบคุมที่จำเป็น
+
+Format:
+1) Current-State Map: Step | Actor | Input | Output | Pain Point
+2) แบ่ง step เป็น Human-only / AI-assist / Automation candidate / Remove-or-Combine
+3) AI Opportunity Map: Opportunity | Expected Value | Required Data | Risk | Human Checkpoint
+4) Future-State Workflow — ไม่เกิน 5–6 ขั้นตอน
+5) Controls: source traceability / KPI definition / approval
+6) Quick Wins 30 วัน
+7) Pilot 60–90 วัน
+8) Success Metrics: Time / Quality / Adoption / Risk
+
+Guardrails:
+- MASTER เป็นเป้าหมายและข้อจำกัดองค์กร; CASE เป็นกระบวนงานที่ต้อง redesign
+- อย่า automate ขั้นตอนที่ยังไม่มีคุณภาพข้อมูลเพียงพอ
+- KPI definition และ approval ต้องมี human owner
+- ไม่สมมติระบบเชื่อมต่อกันได้ถ้า CASE ไม่ได้ระบุ
+- งานกระทบ clinical workflow ต้องมีทีมวิชาชีพและ governance review
+- ระบุ Dependency และ Data Gap ที่ต้องแก้ก่อนเสมอ`,
+objective:"ผู้บริหารเริ่มถามว่า ‘ขั้นตอนไหนไม่ควรมีแล้ว?’ ก่อนถามว่า ‘ขั้นตอนไหนใช้ AI ได้?’",
+challenge:"ขอ Future-State Workflow เป็น Mermaid flowchart พร้อม label [HUMAN] [AI ASSIST] [AUTOMATION] [APPROVAL]"},
+{id:"06",target:"case06",kicker:"AI GOVERNANCE",title:"🛡️ AI Use Case → Governance Gate → 90-Day Pilot",meta:["Risk Gate","Organization","Green / Amber / Red"],
+context:`--- CASE CONTEXT: AI GOVERNANCE #06 ---
+
+หน่วยงานกำลังรวบรวม AI use cases เพื่อพิจารณา pilot
+
+UC1 สรุปรายงานประชุมจาก transcript ที่ไม่มีชื่อผู้ป่วย
+UC2 ร่างข่าวประชาสัมพันธ์จาก press brief ที่ผ่านอนุมัติ
+UC3 สร้าง dashboard จาก aggregate KPI รายเดือน
+UC4 ช่วยร่าง discharge instruction โดยมีข้อมูลผู้ป่วยรายบุคคล
+UC5 ช่วยคัดกรอง email ภายในองค์กรที่อาจมีข้อมูลส่วนบุคคล
+UC6 สรุป Clinical Practice Guideline จากเอกสารสาธารณะ พร้อม citation
+UC7 สร้าง draft ตารางเวรจากข้อมูลบุคลากรและวันลา
+UC8 แนะนำ diagnosis / treatment plan จากเวชระเบียนผู้ป่วย
+
+เป้าหมายของรอบ Governance นี้
+- คัดกรอง use case ที่สามารถทำ sandbox/pilot ได้ภายใต้ MASTER CONTEXT
+- ระบุ use case ที่ต้องผ่าน Privacy / Security / Clinical / Legal review เพิ่มเติม
+- เตรียม candidate use cases สำหรับการทดลองภายในกรอบ 90 วัน`,
+prompt:`Role: คุณเป็น Healthcare AI Governance Advisor
+
+Task: ใช้ MASTER CONTEXT เป็นนโยบาย/ข้อจำกัดองค์กร และใช้ CASE CONTEXT เป็นรายการ use cases และสภาพความพร้อมเฉพาะงาน เพื่อประเมิน AI Use Cases ก่อนนำไป pilot
+
+Format:
+1) ตาราง Risk Classification:
+Use Case | Data Sensitivity | Clinical Impact | External Communication Impact | Automation Level | Reversibility | Risk Tier
+2) จัดเป็น GREEN / AMBER / RED พร้อมเหตุผล
+3) ระบุ Required Review: Privacy / Security / Clinical / Legal / Communications / Procurement
+4) ระบุ Minimum Guardrails ก่อนทดลอง
+5) เสนอ Candidate Use Cases สำหรับ sandbox/pilot ภายใต้กรอบ 90 วัน โดยไม่ต้องจัดอันดับผู้ชนะ
+6) สร้าง 90-Day Pilot Canvas: Objective | Owner | Data | Tool | Guardrail | Human Check | KPI | Stop Criteria
+7) สร้างคำถาม 8 ข้อที่คณะกรรมการ Governance ควรถามก่อนอนุมัติ
+
+Guardrails:
+- MASTER เป็นนโยบายและ Safety Rules; CASE เป็น use cases
+- หากข้อมูลไม่พอให้ระบุ Policy Gap / Data Gap / Governance Gap แทนการเดา
+- ห้ามบอกว่า “ปลอดภัยแน่นอน”
+- ข้อมูลผู้ป่วยรายบุคคลและ clinical decision เป็น high-sensitivity และต้องมี governance review
+- workshop/sandbox ห้ามใช้ PHI/PII จริง ให้ใช้ synthetic/de-identified data ตาม MASTER
+- ถ้ายังไม่มี policy ให้ระบุว่า “ต้องทบทวน policy ขององค์กร”
+- AI output ต้องผ่าน human review ก่อนใช้งานจริง`,
+objective:"Governance ที่ดีไม่ใช่กำแพง แต่เป็นระบบเลือก ‘งานไหนเริ่มได้ งานไหนต้องเพิ่มการควบคุม’",
+challenge:"เลือก 1 use case ที่เหมาะจะศึกษาเป็น pilot แล้วทำ 90-Day Pilot Canvas พร้อม Stop Criteria โดยไม่ฟันธงแทนคณะกรรมการ"}
+];
+
+function esc(s){return s.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")}
+function render(c){
+document.getElementById(c.target).innerHTML=`
+<article class="case" id="c${c.id}">
+<div class="case-head"><div class="num">${c.id}</div><div class="titlebox"><div class="kicker">${c.kicker}</div><h3>${c.title}</h3><div class="meta">${c.meta.map(x=>'<span class="pill">'+x+'</span>').join("")}</div></div></div>
+<div class="grid">
+<section class="panel context"><div class="panel-head"><span>📎 CASE CONTEXT</span><button class="btn copy" data-copy="ctx${c.id}">คัดลอก Context</button></div><textarea class="editor" id="ctx${c.id}">${c.context}</textarea><div class="tools"><button class="btn reset" data-reset="ctx${c.id}">คืนค่า</button></div></section>
+<section class="panel prompt"><div class="panel-head"><span>🧠 PROMPT</span><button class="btn copy" data-copy="pr${c.id}">คัดลอก Prompt</button></div><textarea class="editor" id="pr${c.id}">${c.prompt}</textarea><div class="tools"><button class="btn full" data-full="${c.id}">คัดลอก Prompt + Master + Case Context</button><button class="btn reset" data-reset="pr${c.id}">คืนค่า</button></div></section>
+</div>
+<div class="objective"><b>เป้าหมายการเรียนรู้:</b> ${c.objective}</div><div class="challenge"><b>🎯 Challenge:</b> ${c.challenge}</div>
+</article>`;
+}
+cases.forEach(render);
+const defaults={};document.querySelectorAll("textarea").forEach(x=>defaults[x.id]=x.value);
+async function copyText(t,b){try{await navigator.clipboard.writeText(t);let old=b.textContent;b.textContent="คัดลอกแล้ว ✓";setTimeout(()=>b.textContent=old,1100)}catch(e){alert("คัดลอกไม่สำเร็จ กรุณาเลือกข้อความด้วยตนเอง")}}
+document.addEventListener("click",e=>{
+const b=e.target.closest("button");if(!b)return;
+if(b.dataset.page){document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id===b.dataset.page));window.scrollTo({top:document.querySelector(".tabs").offsetTop,behavior:"smooth"})}
+if(b.dataset.copy){const x=document.getElementById(b.dataset.copy);if(x)copyText(x.value,b)}
+if(b.dataset.full){const id=b.dataset.full;copyText(document.getElementById("pr"+id).value+"\n\n"+document.getElementById("master").value+"\n\n"+document.getElementById("ctx"+id).value,b)}
+if(b.dataset.reset){const x=document.getElementById(b.dataset.reset);if(x)x.value=defaults[x.id]}
+});
+</script>
+</body></html>
