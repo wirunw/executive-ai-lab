@@ -21,6 +21,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Enable GitHub Pages if needed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/${GITHUB_REPOSITORY}/pages >/dev/null 2>&1 ||           gh api --method POST repos/${GITHUB_REPOSITORY}/pages -f build_type=workflow
+          sleep 5
+
       - name: Prepare site
         run: |
           mkdir -p _site
